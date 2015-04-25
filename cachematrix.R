@@ -1,15 +1,20 @@
-## Put comments here that give an overall description of what your
+## makeCacheMatrix makes a cached matrix
 ## functions do
 
-## Write a short comment describing this function
+## makes a square matrix
 
-makeCacheMatrix <- function(x = matrix()) {
-
+makeCacheMatrix <- function(x) {
+  a <- length(x)
+  aa <- sqrt(a)
+  y <<- matrix(x)
+  dim(y) <- c(aa, aa)
+  print(y)
 }
+##Writes the matrix and its inverse so that Matrix*Matrixinverse = 1
 
-
-## Write a short comment describing this function
-
-cacheSolve <- function(x, ...) {
-        ## Return a matrix that is the inverse of 'x'
+cacheSolve <- function(x, ...) {{
+  s <- makeCacheMatrix(x)
+  m <- solve(s)
+  print(m)
+}
 }
